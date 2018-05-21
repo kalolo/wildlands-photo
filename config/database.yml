@@ -75,6 +75,7 @@ test:
 #
 production:
   <<: *default
-  database: photoapi_production
-  username: photo-api
-  password: <%= ENV['PHOTO-API_DATABASE_PASSWORD'] %>
+  host: ec2-54-225-96-191.compute-1.amazonaws.com
+  database: det3lsetf2hv9
+  username: ytofgcqwcljqrs
+  password: 71befedd71921b558d7ea5e93ea3e5cc5367482b1ebe9723cca098e6f021984f
