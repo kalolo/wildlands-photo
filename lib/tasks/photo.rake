@@ -41,6 +41,7 @@ namespace :photo do
            image.height = uploaded_image.height
            image.size = uploaded_image.size
            image.link = uploaded_image.link
+           image.deletehash = uploaded_image.deletehash
            image.save
           rescue => ex
             p '    Unable to upload photo!! ' + ex.message
