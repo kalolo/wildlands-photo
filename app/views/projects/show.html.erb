@@ -1,0 +1,3 @@
+<% @albums.each do |album| %>
+    <div><a href="/projects/<%=album.name%>/images"><%=album.name%> (<%=album.images.size%>)</a></div>
+<% end %>

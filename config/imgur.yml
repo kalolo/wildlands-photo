@@ -1,0 +1,17 @@
+production:
+  client_id: 916c38b77e068dc
+  client_secret: 678c1995f574488a38a8ef5b8399c7514df94d4e
+  access_token: 01b20b44876bbfa04198baaf2d9f85801113fe1b
+  refresh_token: ed08be46ec91a15bc367ca9de026250060cfc7dc
+
+development:
+  client_id: 916c38b77e068dc
+  client_secret: 678c1995f574488a38a8ef5b8399c7514df94d4e
+  access_token: 01b20b44876bbfa04198baaf2d9f85801113fe1b
+  refresh_token: ed08be46ec91a15bc367ca9de026250060cfc7dc
+
+test:
+  client_id: 916c38b77e068dc
+  client_secret: 678c1995f574488a38a8ef5b8399c7514df94d4e
+  access_token: 01b20b44876bbfa04198baaf2d9f85801113fe1b
+  refresh_token: ed08be46ec91a15bc367ca9de026250060cfc7dc
