@@ -15,15 +15,15 @@ namespace :photo do
         access_token: imgur_config['access_token']
     )
 
+    uploaded_count = 0
+
     Dir.entries(root_path).select {
         |entry| File.directory? File.join(root_path,entry) and !(entry =='.' || entry == '..')
     }.each do |album_name|
 
       album = Album.find_by_name(album_name)
-      p "    [+] Getting images for #{album_name}"
 
       if (!album)
-        p "  - creating album #{album_name}"
         album = Album.create({name:album_name})
       end
 
@@ -34,7 +34,7 @@ namespace :photo do
         image = Image.where(album_id: album.id, name:image_file)
 
         if (!image.exists?)
-          p  "      > Uploading #{root_path}/#{album_name}/#{image_file}"
+          puts  "      > Uploading #{root_path}/#{album_name}/#{image_file} [#{uploaded_count}]"
           begin
 
             uploaded_image = imgur_session.image.image_upload("#{root_path}/#{album_name}/#{image_file}")
@@ -50,8 +50,17 @@ namespace :photo do
             image.deletehash = uploaded_image.deletehash
             image.save
 
+            uploaded_count += 1
+
+            if ( uploaded_count == 50)
+              uploaded_count = 0
+              puts "      { sleeping for 1 hour} #{Time.now} see you at: " + ( Time.now + 1.hours )
+              sleep 1.hours
+            end
+
           rescue => ex
-            p '    Unable to upload photo!! ' + ex.message
+            puts 'Exception: Unable to upload photo!! ' + ex.message
+            exit
           end
         end
       end
