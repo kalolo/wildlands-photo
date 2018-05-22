@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
 
   def images
 
-    @album = Album.find_by_name params[:name]
+    @album = Album.includes(:images).find_by_name params[:name]
 
     if (!@album)
       redirect_to "/projects"
