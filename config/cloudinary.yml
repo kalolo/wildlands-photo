@@ -1,0 +1,20 @@
+development:
+  cloud_name: kalolo
+  api_key: 467771366247831
+  api_secret: BVGPPlP36wQO6xq3tf0ZtA2P8_c
+  secure: true
+  cdn_subdomain: true
+
+test:
+  cloud_name: kalolo
+  api_key: 467771366247831
+  api_secret: BVGPPlP36wQO6xq3tf0ZtA2P8_c
+  secure: true
+  cdn_subdomain: true
+
+production:
+  cloud_name: kalolo
+  api_key: 467771366247831
+  api_secret: BVGPPlP36wQO6xq3tf0ZtA2P8_c
+  secure: true
+  cdn_subdomain: true

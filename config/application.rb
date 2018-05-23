@@ -12,5 +12,6 @@ module PhotoApi
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.imgur = config_for(:imgur)
+    config.cloudinary = config_for(:cloudinary)
   end
 end
