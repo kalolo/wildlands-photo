@@ -1,0 +1,13 @@
+<header>
+  <h1><%=@album.name%></h1>
+</header>
+<div class="container" id="main">
+
+  <div class="container" id="pics">
+    <a href="/projects/<%=@album.name%>/images">back</a>
+        <div class="single-image">
+          <%=cl_image_tag(@image.external_id)%>
+        </div>
+    <label><a href="<%=@image.link%>">link</a></label>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-  layout "gallery", :only => [:images]
+  layout "gallery", :only => [:images, :image]
 
   def show
 
@@ -15,6 +15,12 @@ class ProjectsController < ApplicationController
     if (!@album)
       redirect_to "/projects"
     end
+  end
+
+  def image
+    @image = Image.find(params[:imageid])
+    @album = @image.album
 
   end
+
 end
