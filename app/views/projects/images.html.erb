@@ -1,11 +1,13 @@
-
+<header>
+  <h1><%=@album.name%></h1>
+</header>
 <div class="container" id="main">
   <h1><%=@album.name%></h1>
   <div class="container" id="pics">
     <% @album.images.each do |image| %>
-    <div>
-      <a href="<%=image.link%>" target="_blanc"><%=cl_image_tag(image.external_id, :height => 150, :crop => "pad")%></a>
-    </div>
+        <div>
+          <a href="<%=image.link%>" target="_blanc"><%=cl_image_tag(image.external_id, :height => 150, :crop => "pad")%></a>
+        </div>
     <% end %>
   </div>
 </div>
