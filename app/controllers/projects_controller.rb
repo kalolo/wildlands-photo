@@ -13,13 +13,16 @@ class ProjectsController < ApplicationController
     @album = Album.includes(:images).find_by_name params[:name]
 
     if (!@album)
-      redirect_to "/projects"
+      render :notfound
     end
   end
 
   def image
     @image = Image.find(params[:imageid])
     @album = @image.album
+  end
+
+  def notfound
 
   end
 
