@@ -46,36 +46,36 @@
     table {
       border-collapse: collapse;
       border-spacing: 0;
-    }
-    #main {
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
+    }         #pics, header {
+                width: 670px;
+              }
     #pics {
-      margin: 50px;
+      margin: 50px auto;
       padding: 20px;
-      width: 660px;
       border: 1px solid #ccc;
-      flex-direction: row;
-      flex-wrap: wrap;
+    }
+    #pics div {
+      display: inline-block;
     }
     .container {
-      display: flex;
     }
     img {
       width: 200px;
       margin: 10px;
     }
     header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      margin: auto;
+    }
+    header > div {
+      width: 200px;
+      margin: auto;
     }
     header li span {
       font-weight: bold;
       text-transform: lowercase;
+    }
+    h1 {
+      text-align: center;
     }
   </style>
 </head>
