@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 
+  layout "gallery", :only => [:images]
+
   def show
 
     @albums = Album.all()
