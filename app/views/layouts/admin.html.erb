@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Admin</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+</head>
+
+
+<body class="app header-fixed sidebar-md-show sidebar-fixed">
+
+<header class="app-header navbar">
+  <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="nav navbar-nav mr-auto d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="https://coreui.io/">CoreUI Website</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="https://coreui.io/icons/">CoreUI Icons</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="btn btn-warning" href="https://coreui.io/pro/">Go Pro</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <%= current_user.email %>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">logout</a>
+    </li>
+  </ul>
+</header>
+<div class="app-body">
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <ul class="nav">
+        <!--li class="nav-item  nav-dropdown  active">
+          <a class="nav-link  nav-dropdown-toggle " href="#">
+            Getting started
+          </a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item ">
+              <a class="nav-link" href="https://coreui.io/docs/getting-started/ui-kit/">
+                UI Kit
+              </a>
+            </li>
+          </ul>
+        </li-->
+        <li class="nav-item  ">
+          <a class="nav-link " href="<%= admin_users_url %>">Users</a>
+          <a class="nav-link " href="<%= admin_albums_url %>">Albums</a>
+          <a class="nav-link " href="#">Images</a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+  <main class="main">
+    <%= yield %>
+  </main>
+</div>
+<footer class="app-footer">
+
+</footer>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<script>
+    $('#ui-view').ajaxLoad();
+    $(document).ajaxComplete(function() {
+        Pace.restart()
+    });
+</script>
+</body>
+</html>

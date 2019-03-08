@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card-group">
+        <div class="card p-4">
+          <div class="card-body">
+
+            <%= form_for(:session, url: login_path) do |f| %>
+
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend"><span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <%= f.submit "Login", class: "btn btn-primary px-4" %>
+                  </div>
+                  <div class="col-6 text-right">
+                    <button class="btn btn-link px-0" type="button">Forgot password?</button>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <% if flash[:error] && !flash[:error].empty? %>
+                      <div class="alert alert-danger" role="alert"><%= flash[:error] %></div>
+                  <% end %>
+                </div>
+
+
+            <% end %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

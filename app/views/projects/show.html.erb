@@ -1,4 +1,14 @@
-<h4>Project</h4>
-<% @albums.each do |album| %>
-    <div><a href="/projects/<%=album.name%>/images"><%=album.name%> (<%=album.images.size%>)</a></div>
-<% end %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <h4>Projects</h4>
+    <div class="col-md-12">
+      <div class="list-group">
+        <% @albums.each do |album| %>
+            <a class="list-group-item list-group-item-action" href="/projects/<%= album.name %>/images"><%= album.name %>
+              (<%= album.images.size %>)</a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

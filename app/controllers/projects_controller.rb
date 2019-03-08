@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-  layout "gallery", :only => [:images, :image]
+  layout 'gallery', :only => [:images, :image]
 
   def show
 

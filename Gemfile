@@ -54,3 +54,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'imgurapi'
 gem 'cloudinary'
+gem 'coreui-rails'
+gem "bcrypt", "~> 3.1"
+gem 'devise'
