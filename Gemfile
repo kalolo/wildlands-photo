@@ -57,3 +57,4 @@ gem 'cloudinary'
 gem 'coreui-rails'
 gem "bcrypt", "~> 3.1"
 gem 'devise'
+gem "sprockets", ">= 3.7.2"
